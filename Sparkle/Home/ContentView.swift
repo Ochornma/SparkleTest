@@ -29,7 +29,7 @@ struct ContentView: View {
                     .padding()
                 }
                 .onAppear{
-                    vm.requestForCharacter(page: 0)
+                   // vm.requestForCharacter(page: 0)
                 }
                 .navigationDestination(
                     isPresented: $openDetailsPage) {
@@ -38,6 +38,7 @@ struct ContentView: View {
                         }
                         
                     }
+                    .modifier(ActivityIndicatorModifier(isLoading:  $vm.isLoading))
             
             }.navigationTitle("Film Characters")
                 .navigationBarTitleDisplayMode(.large)

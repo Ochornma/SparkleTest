@@ -19,6 +19,7 @@ class HomeViewModel: ObservableObject {
     
     init() {
         self.networkManager = NetworkManagerImpl.shared
+        requestForCharacter(page: 0)
     }
     
     func requestForCharacter(page: Int){
